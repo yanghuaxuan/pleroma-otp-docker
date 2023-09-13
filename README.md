@@ -17,12 +17,12 @@ Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-plero
       cat /dev/urandom | base64 | head -c 64
       ```
 3. Build
-```
-docker compose build
-# or
-docker build -t pleroma .
-```
+    ```
+    docker compose build
+    # or
+    docker build -t pleroma .
+    ```
 3. Run
-```
-docker compose up -d
-```
+    ```
+    docker compose up -d
+    ```
