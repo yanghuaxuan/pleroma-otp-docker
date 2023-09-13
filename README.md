@@ -24,3 +24,5 @@ docker build -t pleroma .
 ```
 docker compose up -d
 ```
+
+Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-pleroma)
