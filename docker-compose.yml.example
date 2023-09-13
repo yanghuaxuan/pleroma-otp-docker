@@ -17,6 +17,12 @@ services:
     image: pleroma
     build:
       context: .
+    healthcheck:
+      test:
+        [
+         "CMD-SHELL",
+          "curl http://localhost:4000/api/v1/instance || exit 1"
+        ]
     volumes: 
       - public:/var/lib/pleroma
     environment:
