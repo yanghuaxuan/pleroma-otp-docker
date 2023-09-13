@@ -10,7 +10,11 @@
 - `config.exs` runs into permission problems when bind mounted. Thus, the Dockerfile directly copies the file to solve this.
 
 1. Modify `config.exs` accordingly
-2. Build
+    - Hint, you can generate the database password using
+      ```
+      cat /dev/urandom | base64 | head -c 64
+      ```
+3. Build
 ```
 docker compose build
 # or
