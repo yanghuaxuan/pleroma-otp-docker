@@ -10,9 +10,10 @@ Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-plero
 ## Usage
 **The image will need to be built by yourself.**
 - `config.exs` runs into permission problems when bind mounted. Thus, the Dockerfile directly copies the file to solve this.
-1. Copy `config.exs.example` to `config.exs`
+1. Copy `config.exs.example` and `docker-compose.yml.example`
     ```
     cp config.exs.example config.exs
+    cp docker-compose.yml.example docker-compose.yml
     ```
 3. Modify `config.exs` accordingly
     - Hint, you can generate the database password using
