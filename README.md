@@ -15,7 +15,7 @@ Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-plero
     cp config.exs.example config.exs
     cp docker-compose.yml.example docker-compose.yml
     ```
-3. Modify `config.exs` accordingly
+3. Modify `config.exs` and `docker-compose.yml` accordingly 
     - Hint, you can generate the database password using
       ```
       cat /dev/urandom | base64 | head -c 64
