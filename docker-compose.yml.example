@@ -1,0 +1,32 @@
+version: '3'
+
+volumes:
+  db:
+  public:
+
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pleroma
+      POSTGRES_DB: pleroma
+      POSTGRES_PASSWORD: !!!CHANGEME!!!
+  pleroma:
+    image: pleroma
+    build:
+      context: .
+    volumes: 
+      - public:/var/lib/pleroma
+    environment:
+      DOMAIN: post.hyang.xyz
+      INSTANCE_NAME: hyang.xyz
+      ADMIN_EMAIL: webmaster@hyang.xyz
+      NOTIFY_EMAIL: notify@ehyang.xyz
+      DB_HOST: db
+      DB_USER: pleroma
+      DB_NAME: pleroma
+      DB_PASS: !!!CHANGEME!!!
+    depends_on:
+      - db
