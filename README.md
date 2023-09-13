@@ -1,4 +1,5 @@
 **OTP Release Pleroma, Containerized**
+Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-pleroma)
 
 ## Features
 - Based on a slightly modified version of [this guide](https://docs.pleroma.social/backend/installation/otp_en/#edit-the-nginx-config)
@@ -24,5 +25,3 @@ docker build -t pleroma .
 ```
 docker compose up -d
 ```
-
-Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-pleroma)
