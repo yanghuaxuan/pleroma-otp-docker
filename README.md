@@ -10,13 +10,16 @@ Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-plero
 ## Usage
 **The image will need to be built by yourself.**
 - `config.exs` runs into permission problems when bind mounted. Thus, the Dockerfile directly copies the file to solve this.
-
-1. Modify `config.exs` accordingly
+1. Copy `config.exs.example` to `config.exs`
+    ```
+    cp config.exs.example config.exs
+    ```
+3. Modify `config.exs` accordingly
     - Hint, you can generate the database password using
       ```
       cat /dev/urandom | base64 | head -c 64
       ```
-3. Build
+4. Build
     ```
     docker compose build
     # or
