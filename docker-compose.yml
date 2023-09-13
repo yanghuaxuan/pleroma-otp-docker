@@ -27,6 +27,6 @@ services:
       DB_HOST: db
       DB_USER: pleroma
       DB_NAME: pleroma
-      DB_PASS: XvwfqPZGewF/268D65CO5rmrNBoFJpy7wTLjCHEJCchNEieQ8Xf0cq9VoRdn3g+Q
+      DB_PASS: !!!CHANGEME!!!
     depends_on:
       - db
