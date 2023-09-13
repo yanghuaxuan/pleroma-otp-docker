@@ -12,7 +12,7 @@ services:
     environment:
       POSTGRES_USER: pleroma
       POSTGRES_DB: pleroma
-      POSTGRES_PASSWORD: XvwfqPZGewF/268D65CO5rmrNBoFJpy7wTLjCHEJCchNEieQ8Xf0cq9VoRdn3g+Q
+      POSTGRES_PASSWORD: !!!CHANGEME!!!
   pleroma:
     image: pleroma
     build:
