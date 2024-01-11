@@ -30,3 +30,10 @@ Inspired by [angristan/docker-pleroma](https://github.com/angristan/docker-plero
     ```
     docker compose up -d
     ```
+
+## Upgrading
+```
+docker build -t pleroma .
+docker-compose run --rm web mix ecto.migrate # migrate the database if needed
+docker-compose up -d # recreate the containers if needed
+```
